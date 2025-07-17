@@ -1,16 +1,16 @@
 {
-    "name": "pholith.easycolors",
+    "name": "pallimustus.easycolors",
     "title": "EasyColors",
     "description": "Diagram color managment",
-    "homepage": "https://github.com/Pholith/StarUML-ColorExtension",
+    "homepage": "https://github.com/matthew-renodin-bh/StarUML-ColorExtension",
     "version": "1.0.0",
     "keywords": ["color"],
     "author": {
-      "name": "Vincent Buisset",
+      "name": "Matthew Renodin",
       "email": "vincent22062@gmail.com",
-      "url": "https://github.com/Pholith"
+      "url": "https://github.com/matthew-renodin"
     },
-    "license": "Not choiced",
+    "license": "MIT",
     "engines": {
       "staruml": ">=4.0.0"
     }
