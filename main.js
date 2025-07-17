@@ -1,41 +1,41 @@
 
 let dict = {
     // UML diagrams
-    "uml.class.fillColor":                      "#d8e1f8",
-    "uml.interface.fillColor":                  "#ffffcd",
-    "uml.enumeration.fillColor":                "#f4d3d3",
-    "uml.actor.fillColor":                      "#ffffff",
-    "uml.package.fillColor":                    "#fff2e4",
-    "uml.usecase.fillColor":                    "#d6ffae",
-    "uml.action.fillColor":                     "#d8e1f8",
-    "uml.controlnode.fillColor":                "#cce18d",
-    "uml.node.fillColor":                       "#f1d9c2",
-    "uml.component.fillColor":                  "#e1e5fa",
-    "uml.artifact.fillColor":                   "#e3ffc9",
-    "uml.port.fillColor":                       "#c082ff",
+    "uml.class":             { fillColor: "#d8e1f8", lineColor: "#5c82b0" },
+    "uml.interface":         { fillColor: "#ffffcd", lineColor: "#c4c486" },
+    "uml.enumeration":       { fillColor: "#f4d3d3", lineColor: "#cc9999" },
+    "uml.actor":             { fillColor: "#ffffff", lineColor: "#999999" },
+    "uml.package":           { fillColor: "#fff2e4", lineColor: "#e6d0b7" },
+    "uml.usecase":           { fillColor: "#d6ffae", lineColor: "#8fb96b" },
+    "uml.action":            { fillColor: "#d8e1f8", lineColor: "#5c82b0" },
+    "uml.controlnode":       { fillColor: "#cce18d", lineColor: "#7c9e3c" },
+    "uml.node":              { fillColor: "#f1d9c2", lineColor: "#c2aa8f" },
+    "uml.component":         { fillColor: "#e1e5fa", lineColor: "#a0a6d6" },
+    "uml.artifact":          { fillColor: "#e3ffc9", lineColor: "#a2d987" },
+    "uml.port":              { fillColor: "#c082ff", lineColor: "#9955cc" },
 
     // Flowchart diagrams
-    "flowchart.terminator.fillColor":           "#9acef6",
-    "flowchart.process.fillColor":              "#fff07c",
-    "flowchart.decision.fillColor":             "#cce18d",
-    "flowchart.database.fillColor":             "#f8a9cc",
-    "flowchart.document.fillColor":             "#8acd8a",
-    "flowchart.predefined-process.fillColor":   "#ddc8c3",
-    "flowchart.data.fillColor":                 "#dee7fe",
-    "flowchart.manual-input.fillColor":         "#edeffa",
+    "flowchart.terminator":           { fillColor: "#9acef6", lineColor: "#669fd6" },
+    "flowchart.process":              { fillColor: "#fff07c", lineColor: "#d6c757" },
+    "flowchart.decision":             { fillColor: "#cce18d", lineColor: "#8fb657" },
+    "flowchart.database":             { fillColor: "#f8a9cc", lineColor: "#d97fa7" },
+    "flowchart.document":             { fillColor: "#8acd8a", lineColor: "#5da35d" },
+    "flowchart.predefined-process":   { fillColor: "#ddc8c3", lineColor: "#bca29e" },
+    "flowchart.data":                 { fillColor: "#dee7fe", lineColor: "#aab6e7" },
+    "flowchart.manual-input":         { fillColor: "#edeffa", lineColor: "#c0c3d7" },
 
-    // ✅ SysML color scheme
-    "sysml.block.fillColor":                    "#4682B4",  // Steel Blue
-    "sysml.requirement.fillColor":              "#FFFFF0",  // Ivory
-    "sysml.constraintblock.fillColor":          "#D3D3D3",  // Light Gray
-    "sysml.valuetype.fillColor":                "#FFFFF0",  // Ivory
-    "sysml.port.fillColor":                     "#008080",  // Teal
-    "sysml.fullport.fillColor":                 "#20B2AA",  // Light Sea Green
-    "sysml.proxyport.fillColor":                "#5F9EA0",  // Cadet Blue
-    "sysml.flowport.fillColor":                 "#6B8E23",  // Olive Drab
-    "sysml.itemflow.fillColor":                 "#6B8E23",  // Olive Drab
-    "sysml.connector.fillColor":                "#4682B4",  // Steel Blue
-    "sysml.package.fillColor":                  "#B0C4DE",  // Light Steel Blue
+    // ✅ SysML diagrams
+    "sysml.block":            { fillColor: "#4682B4", lineColor: "#2F4F4F" },
+    "sysml.requirement":      { fillColor: "#FFFFF0", lineColor: "#BDB76B" },
+    "sysml.constraintblock":  { fillColor: "#D3D3D3", lineColor: "#A9A9A9" },
+    "sysml.valuetype":        { fillColor: "#FFFFF0", lineColor: "#BDB76B" },
+    "sysml.port":             { fillColor: "#008080", lineColor: "#004C4C" },
+    "sysml.fullport":         { fillColor: "#20B2AA", lineColor: "#006666" },
+    "sysml.proxyport":        { fillColor: "#5F9EA0", lineColor: "#2F4F4F" },
+    "sysml.flowport":         { fillColor: "#6B8E23", lineColor: "#556B2F" },
+    "sysml.itemflow":         { fillColor: "#6B8E23", lineColor: "#556B2F" },
+    "sysml.connector":        { fillColor: "#4682B4", lineColor: "#2F4F4F" },
+    "sysml.package":          { fillColor: "#B0C4DE", lineColor: "#4682B4" }
 
 
 }
