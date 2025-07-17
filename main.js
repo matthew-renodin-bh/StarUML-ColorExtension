@@ -1,26 +1,20 @@
 
 let dict = {
-    // Class diagram
+    // UML diagrams
     "uml.class.fillColor":                      "#d8e1f8",
     "uml.interface.fillColor":                  "#ffffcd",
     "uml.enumeration.fillColor":                "#f4d3d3",
-    
-    // Use case diagram
     "uml.actor.fillColor":                      "#ffffff",
     "uml.package.fillColor":                    "#fff2e4",
     "uml.usecase.fillColor":                    "#d6ffae",
-
-    // Activity diagram
     "uml.action.fillColor":                     "#d8e1f8",
     "uml.controlnode.fillColor":                "#cce18d",
-
-    // Deployment and component diagram
     "uml.node.fillColor":                       "#f1d9c2",
     "uml.component.fillColor":                  "#e1e5fa",
     "uml.artifact.fillColor":                   "#e3ffc9",
     "uml.port.fillColor":                       "#c082ff",
 
-    // Flowchart diagram
+    // Flowchart diagrams
     "flowchart.terminator.fillColor":           "#9acef6",
     "flowchart.process.fillColor":              "#fff07c",
     "flowchart.decision.fillColor":             "#cce18d",
@@ -29,6 +23,20 @@ let dict = {
     "flowchart.predefined-process.fillColor":   "#ddc8c3",
     "flowchart.data.fillColor":                 "#dee7fe",
     "flowchart.manual-input.fillColor":         "#edeffa",
+
+    // ✅ SysML color scheme
+    "sysml.block.fillColor":                    "#4682B4",  // Steel Blue
+    "sysml.requirement.fillColor":              "#FFFFF0",  // Ivory
+    "sysml.constraintblock.fillColor":          "#D3D3D3",  // Light Gray
+    "sysml.valuetype.fillColor":                "#FFFFF0",  // Ivory
+    "sysml.port.fillColor":                     "#008080",  // Teal
+    "sysml.fullport.fillColor":                 "#20B2AA",  // Light Sea Green
+    "sysml.proxyport.fillColor":                "#5F9EA0",  // Cadet Blue
+    "sysml.flowport.fillColor":                 "#6B8E23",  // Olive Drab
+    "sysml.itemflow.fillColor":                 "#6B8E23",  // Olive Drab
+    "sysml.connector.fillColor":                "#4682B4",  // Steel Blue
+    "sysml.package.fillColor":                  "#B0C4DE",  // Light Steel Blue
+
 
 }
 
