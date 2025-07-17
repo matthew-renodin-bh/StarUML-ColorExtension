@@ -75,63 +75,71 @@ let dict = {
     "sysml.package.lineColor":                  "#4682B4"
 }
 
-// Prefix used in class names
-let prefix = {
+let prefManager;
+
+// Prefix used to match view class names to dictionary keys
+const prefixMap = {
     "DFD": "dfd",
     "FC": "flowchart",
     "UML": "uml",
     "SysML": "sysml",
     "ERD": "erd"
-}
+};
 
-
+// Set all custom colors defined in `dict`
 function setColors() {
     for (const key of Object.keys(dict)) {
-        prefManager.set(key, dict[key])
+        prefManager.set(key, dict[key]);
     }
-
 }
 
+// Reset all colors to default (null)
 function setDefault() {
     for (const key of Object.keys(dict)) {
-        prefManager.set(key, null)
+        prefManager.set(key, null);
     }
 }
 
+// Apply color settings to the currently active diagram
 function applyOnDiagram() {
-    let diagram = app.diagrams.getCurrentDiagram()
+    const diagram = app.diagrams.getCurrentDiagram();
+
+    if (!diagram) return;
+
     for (const view of diagram.ownedViews) {
+        let className = view.getClassName();
+        let prefix = "";
 
-        // Build the preference Id using the class name and the class prefix
-        let name = view.getClassName()
-        let prefId = ""
-        
-        // TODO check Multi-Document and Manuel-input
-
-        for (const key of Object.keys(prefix)) {
-            if (name.startsWith(key)) {
-                prefId += prefix[key] + "."
-                name = name.substr(key.length)
+        // Identify the correct prefix (e.g., "sysml", "uml", etc.)
+        for (const key of Object.keys(prefixMap)) {
+            if (className.startsWith(key)) {
+                prefix = prefixMap[key] + ".";
+                className = className.substring(key.length);
                 break;
             }
         }
-        prefId += name.replace("View", "").toLowerCase()+".fillColor"
 
-        // Change the element color
-        let prefColor = prefManager.get(prefId)
-        if (prefColor != null) view.fillColor = prefColor
+        const baseName = className.replace("View", "").toLowerCase();
+
+        const fillKey = prefix + baseName + ".fillColor";
+        const lineKey = prefix + baseName + ".lineColor";
+
+        const fillColor = prefManager.get(fillKey);
+        const lineColor = prefManager.get(lineKey);
+
+        if (fillColor !== null) view.fillColor = fillColor;
+        if (lineColor !== null) view.lineColor = lineColor;
     }
-    app.diagrams.repaint()
+
+    app.diagrams.repaint();
 }
 
-
-
-let prefManager;
+// Register commands with StarUML
 function init() {
-    app.commands.register('color:set', setColors)
-    app.commands.register('color:default', setDefault)
-    app.commands.register('color:apply', applyOnDiagram)
-    prefManager = app.preferences
+    prefManager = app.preferences;
+    app.commands.register("color:set", setColors);
+    app.commands.register("color:default", setDefault);
+    app.commands.register("color:apply", applyOnDiagram);
 }
 
-exports.init = init
+exports.init = init;
